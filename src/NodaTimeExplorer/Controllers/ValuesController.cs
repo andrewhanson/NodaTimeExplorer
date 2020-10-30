@@ -29,7 +29,13 @@ namespace NodaTimeExplorer.Controllers
                 LastModifiedDateTime = clock.Now.Minus(Duration.FromMinutes(10))
             };
             
-            return Ok( new {user, Now = clock.Now, LocalNow = clock.LocalNow, TimeTravelNow = timeTravelClock.Now, TimeTravelLocalNow = timeTravelClock.LocalNow });
+            return Ok( new {
+                            user, 
+                            Now = clock.Now, 
+                            LocalNow = clock.LocalNow, 
+                            TimeTravelNow = timeTravelClock.Now, 
+                            TimeTravelLocalNow = timeTravelClock.LocalNow 
+                        });
         }
     }
 }
